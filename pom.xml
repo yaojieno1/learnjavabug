@@ -18,6 +18,12 @@
     <module>xxe</module>
     <module>dubbo</module>
     <module>rmi</module>
+    <module>tomcat</module>
+    <module>spring</module>
+    <module>cas</module>
+    <module>ShardingSphere-UI</module>
+    <module>shiro</module>
+    <module>nexus</module>
   </modules>
 
   <name>learn-java-bug</name>
