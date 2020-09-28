@@ -13,6 +13,8 @@
   <packaging>pom</packaging>
   <modules>
     <module>ajp-bug</module>
+    <module>sync-session-bug</module>
+    <module>session-filestore</module>
   </modules>
 
   <dependencies>
